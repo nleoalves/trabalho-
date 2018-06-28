@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RADJOY</title>
+    <link rel="stylesheet" href="css/gall.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">
+                    RadJoy
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li id="link-home">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="link-gallery">
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li id="link-contato">
+                            <a href="#box3">Contato</a>
+                        </li>
+                        <li id="link-login">
+                            <a class="active" href="log.html">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!--galeria de fotos-->
+            <div class="galeria">
+                <img src="https://2.bp.blogspot.com/-q-3BaZvnIBo/UI3WfZaUfXI/AAAAAAAAA6Y/KQLVtqG20D0/s1600/icebar+fire+lounge.jpg" />
+                <img src="https://1.bp.blogspot.com/-K2iZC0WLq5Y/Vzx0VSxQEFI/AAAAAAAApsY/Zs45R_hBFnsvc8GJwkuz_HCebqb-KiiMwCLcB/s1600/balada-set-nightclub-miami-beach.jpeg"
+                />
+                <img src="http://www.bestfriendsfw.com/wp-content/uploads/2018/01/Fun.jpg" />
+                <img src="https://i2.wp.com/www.parquesdeorlando.com.br/wp-content/uploads/2017/10/icebar-orlando-b.jpg?resize=702%2C527"
+                />
+                <img src="https://www.floridamais.com/wp-content/uploads/2016/07/Instagram_HardRockCafeOrlando.png" />
+                <img src="http://baladain.com.br/admin2/uploads/cirque_du_soleil_a_l.jpg" />
+                <img src="https://static.wixstatic.com/media/9ed1d8_916f61fe9b874f4ea8f78c9ceb4100ac~mv2_d_1917_1280_s_2.jpg_srz_1280_855_85_22_0.50_1.20_0.00_jpg_srz"
+                />
+                <img src="http://f.i.uol.com.br/fotografia/2012/04/19/141715-970x600-1.jpeg" />
+                <img src="https://secure.parksandresorts.wdpromedia.com/media/disneyparks/blog/wp-content/uploads/2014/12/thmsu987654.jpg"
+                />
+            </div>
+        </header>
+    </div>
+
+    <!--bg-->
+    <div class="bg"></div>
+
+    <!--box de imagens-->
+    <div class="lb">
+        <img src="" />
+        <div class="close">X</div>
+    </div>
+
+    <script type="text/javascript">
+
+        // Menu-toggle button
+
+        $(document).ready(function () {
+            $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // EFEITO SCROLL
+
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            }
+
+            else {
+                $('nav').removeClass('black');
+            }
+        })
+        $(document).ready(function () {
+            $('.galeria img').click(function () {
+                $('.bg').animate({ 'opacity': '0.60' }, 500, 'linear');
+                $('.bg, .lb').css('display', 'block');
+
+                var big = $(this).attr('src');
+
+                $('.lb img').attr('src', big);
+                $('.lb img').animate({ 'opacity': '1.00' }, 1500, 'linear');
+            });
+
+            $('.close').click(function () {
+                $('.lb img').css('opacity', '0');
+                $('.bg, .lb').css('display', 'none');
+
+            });
+
+
+        });
+    </script>
+    <footer>
+        <p>Desenvolvido por Felipe de Freitas Pereira e Nilton Leonardo</p>
+    </footer>
+</body>
+
+</html>

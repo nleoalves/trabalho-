@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RADJOY</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">
+                    RadJoy
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li id="link-home">
+                            <a href="#top">Home</a>
+                        </li>
+                        <li id="link-gallery">
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li id="link-contato">
+                            <a href="#box3">Contato</a>
+                        </li>
+                        <li id="link-login">
+                            <a class="active" href="log.html">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div>
+            <section id="box1" class="content">
+                <article class="content">
+                    <br>
+                    <br>
+                    <br>
+                    <h2>RadJoy</h2>
+                    <p>
+                        Software para informações, pagamento e ofertas sobre o que tem para fazer ao seu redor.
+                        <br> Quem é que nunca fica na dúvida de qual lugar ir e nem sabe o que tá rolando ao redor? Pois é, estamos
+                        aqui pra resolver esse problema!
+                        <br> RadJoy é um sistema inovador que informa tudo o que você pode fazer no lugar que você está e ainda
+                        te dá a possibilidade de conhecer o estabelecimento e tudo o que ele pode te oferecer da melhor forma
+                        possível antes mesmo de você chegar até lá.
+                        <br> O software possui informações sobre o que bares, restaurantes e baladas, onde você tem acesso aos
+                        produtos que são oferecidos nos locais, tendo ainda a possibilidade de adquiri-los, efetuar reservas,
+                        garantir sua entrada e ainda aproveitar as ofertas e promoções exclusivas oferecidas para os nossos
+                        usuários.
+                        <br> Quem nunca saiu do trabalho sedento por um happy hour com a galera da firma? Então, aqui você consegue
+                        ver e escolher qual é o local ideal que vai te oferecer o que procura e já garantir a mesa com lugares
+                        pra todo mundo. E no dia a dia? Quer comer algo diferente no horário de almoço mas não sabe ao certo
+                        o que? Com o RaidJoy você ver o que cada estabelecimento servirá e ainda pode aproveitar e já comprar
+                        sua refeição antes mesmo de chegar no local. É Sábado a noite e ainda tá em dúvida qual o melhor
+                        rolê? Aqui você pode garantir a melhor opção pra aproveitar a noite e ainda não precisar enfrentar
+                        filas para efetuar pagamento de entrada eté mesmo já garantir seu drink antes mesmo de sair casa.
+                        <br> Estamos aqui pra te ajudar a escolher o que vai melhor te satisfazer ao seu redor.
+                        <h3>RadJoy</h3>
+                        what’s going around?
+                    </p>
+                </article>
+            </section>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        // Menu-toggle button
+
+        $(document).ready(function () {
+            $(".menu-icon").on("click", function () {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // EFEITO SCROLL
+
+        $(window).on("scroll", function () {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            }
+
+            else {
+                $('nav').removeClass('black');
+            }
+        })
+    </script>
+    <footer>
+        <p>Desenvolvido por Felipe de Freitas Pereira e Nilton Leonardo</p>
+    </footer>
+</body>
+
+</html>

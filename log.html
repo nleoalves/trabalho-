@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RADJOY</title>
+  <link rel="stylesheet" href="css/log.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js
+  "></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <div class="logo">
+          RadJoy
+        </div>
+        <div class="menu">
+          <ul>
+            <li id="link-home">
+              <a href="index.html">Home</a>
+            </li>
+            <li id="link-gallery">
+              <a href="gallery.html">Gallery</a>
+            </li>
+            <li id="link-contato">
+              <a href="#box3">Contato</a>
+            </li>
+            <li id="link-login">
+              <a class="active" href="log.html">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div class="login-page">
+    <div class="form">
+      <form class="register-form" method="post" action="img/output.gif" onsubmit="return validacao();">
+        <input class="text" placeholder="User Name" required />
+        <input class="text" placeholder="CPF" required />
+        <input class="text" placeholder="Email id" required />
+        <input class="text" placeholder="Password" required />
+        <button>Create</button>
+        <p class="message">Already Registered?
+          <a href="#">Login</a>
+        </p>
+      </form>
+      <form class="login-form" method="post" action="img/construcao.gif" onsubmit="return validacao();">
+        <input type="text" placeholder="User Name" required />
+        <input type="password" placeholder="Password" required />
+        <button>Login</button>
+        <p class="message">Not Registered?
+          <a href="#">Register</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    // Menu-toggle button
+
+    $(document).ready(function () {
+      $(".menu-icon").on("click", function () {
+        $("nav ul").toggleClass("showing");
+      });
+    });
+
+    // EFEITO SCROLL
+
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop()) {
+        $('nav').addClass('black');
+      }
+
+      else {
+        $('nav').removeClass('black');
+      }
+    })
+
+    //efeito no registro
+    $('.message a').click(function () {
+      $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
+
+  </script>
+  <footer>
+    <p>Desenvolvido por Felipe de Freitas Pereira e Nilton Leonardo</p>
+  </footer>
+</body>
+
+</html>
